@@ -1,12 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { nav, site } from "@/lib/content";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [progress, setProgress] = useState(0);
   const [open, setOpen] = useState(false);
+  const path = usePathname();
+  const applyHref = path === "/" ? "#apply" : "/#apply";
 
   useEffect(() => {
     const onScroll = () => {
@@ -44,7 +47,7 @@ export default function Header() {
   return (
     <header className={scrolled ? "site-header is-scrolled" : "site-header"}>
       <div className="header-inner">
-        <a className="logo" href="#top" aria-label={site.name}>
+        <a className="logo" href="/" aria-label={site.name}>
           <LogoMark />
           <span>{site.name}</span>
         </a>
@@ -56,7 +59,10 @@ export default function Header() {
           ))}
         </nav>
         <div className="header-tools">
-          <a className="btn header-cta" href="#apply">
+          <a className="btn btn-careers" href="/apply" aria-current={path === "/apply" ? "page" : undefined}>
+            Careers
+          </a>
+          <a className="btn header-cta" href={applyHref}>
             <span className="cta-long">Apply to work with us</span>
             <span className="cta-short">Apply</span>
           </a>
@@ -77,7 +83,7 @@ export default function Header() {
       {open ? (
         <div className="nav-mobile" id="mobile-nav">
           <div className="nav-mobile-bar">
-            <a className="logo" href="#top" onClick={() => setOpen(false)}>
+            <a className="logo" href="/" onClick={() => setOpen(false)}>
               <LogoMark />
               <span>{site.name}</span>
             </a>
@@ -98,7 +104,10 @@ export default function Header() {
               FAQ
             </a>
           </nav>
-          <a className="btn" href="#apply" onClick={() => setOpen(false)}>
+          <a className="btn btn-careers" href="/apply" onClick={() => setOpen(false)}>
+            Careers
+          </a>
+          <a className="btn" href={applyHref} onClick={() => setOpen(false)}>
             Apply to work with us
           </a>
         </div>

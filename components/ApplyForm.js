@@ -227,7 +227,7 @@ export default function ApplyForm() {
   );
 }
 
-function Choice({ id, name, value, options, invalid, describedBy, onChange }) {
+export function Choice({ id, name, value, options, invalid, describedBy, onChange }) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef(null);
   const listId = `${id}-list`;
