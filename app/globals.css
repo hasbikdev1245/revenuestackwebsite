@@ -1021,21 +1021,17 @@ h3 {
 }
 
 .careers-hero h1 {
-  font-size: clamp(2.4rem, 5.4vw, 4.4rem);
-  font-weight: 500;
-  line-height: 1.05;
-  letter-spacing: -0.045em;
-  text-transform: uppercase;
-  max-width: 16em;
+  font-size: clamp(2.65rem, 5.3vw, 4.45rem);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  max-width: 14em;
   margin: 0 auto;
 }
 
 .careers-hero .lede {
-  max-width: 38rem;
-  margin: 18px auto 0;
-  color: var(--muted);
-  font-size: 18px;
-  line-height: 1.5;
+  max-width: 40rem;
+  margin: 22px auto 0;
+  font-size: 16.5px;
 }
 
 .vsl {
