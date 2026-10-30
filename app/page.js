@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Marquee from "@/components/Marquee";
 import Problem from "@/components/Problem";
 import Mechanism from "@/components/Mechanism";
 import Proof from "@/components/Proof";
@@ -14,7 +13,6 @@ export default function Page() {
       <Header />
       <main id="main">
         <Hero />
-        <Marquee />
         <Problem />
         <Mechanism />
         <Proof />
