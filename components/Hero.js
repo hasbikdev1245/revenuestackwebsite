@@ -13,7 +13,7 @@ export default function Hero() {
           You’ve cracked paid traffic. Your closers close. The backend is now a constraint. Founder may be stuck in fulfillment, without a sustainable backend system to sustain the front end growth.
         </p>
         <div className="hero-actions">
-          <a className="btn" href="#apply">
+          <a className="btn" href="#fit">
             Apply to work with us
           </a>
         </div>

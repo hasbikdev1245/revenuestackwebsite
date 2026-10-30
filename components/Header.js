@@ -6,16 +6,13 @@ import { nav, site } from "@/lib/content";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [progress, setProgress] = useState(0);
   const [open, setOpen] = useState(false);
   const path = usePathname();
-  const applyHref = path === "/" ? "#apply" : "/#apply";
+  const applyHref = "/#fit";
 
   useEffect(() => {
     const onScroll = () => {
-      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
       setScrolled(window.scrollY > 8);
-      setProgress(scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -79,7 +76,6 @@ export default function Header() {
           </button>
         </div>
       </div>
-      <span className="progress" style={{ transform: `scaleX(${progress})` }} />
       {open ? (
         <div className="nav-mobile" id="mobile-nav">
           <div className="nav-mobile-bar">
@@ -97,10 +93,7 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
-            <a href="#proof" onClick={() => setOpen(false)}>
-              Record
-            </a>
-            <a href="#faq" onClick={() => setOpen(false)}>
+            <a href="/#faq" onClick={() => setOpen(false)}>
               FAQ
             </a>
           </nav>

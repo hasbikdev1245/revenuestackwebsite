@@ -16,11 +16,8 @@ export default function Footer() {
                 {item.label}
               </a>
             ))}
-            <a href="/#proof">Record</a>
-            <a href="/#fit">Fit</a>
             <a href="/#faq">FAQ</a>
             <a href="/apply">Careers</a>
-            <a href="/#apply">Apply</a>
           </nav>
           <p>© {new Date().getFullYear()} {site.name}</p>
         </div>
