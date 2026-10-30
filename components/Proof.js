@@ -5,17 +5,11 @@ export default function Proof() {
     <section className="section" id="proof">
       <div className="wrap">
         <div className="editorial">
-          <p className="eyebrow">05 — The record</p>
+          <p className="eyebrow">03 — The record</p>
           <div className="editorial-body">
             <h2>Who’s behind this.</h2>
             <div className="prose">
-              <p>This isn’t theory borrowed from a course. It’s built from inside 7 and 8 figure businesses.</p>
-              <p>
-                Three 8 figure clients across a real estate coaching offer, an agency coaching offer, and a health business opportunity plus marketing offer. Multiple 7 figure agencies and info businesses in the $200K to $400K per month range. Every one of them had the same shape: cracked front end, missing backend.
-              </p>
-              <p>
-                The playbook that came out of those installs is what gets deployed in your business, sequenced for your specific bottleneck instead of copied blindly.
-              </p>
+              <p>Built inside 7 and 8 figure businesses with the same shape: cracked front end, missing backend.</p>
             </div>
             <dl className="stats">
               <div className="stat">
@@ -36,9 +30,6 @@ export default function Proof() {
                 </li>
               ))}
             </ol>
-            <p className="dossier-note">
-              Plus multiple 7 figure agencies and info businesses in the $200K to $400K per month range.
-            </p>
           </div>
         </div>
       </div>

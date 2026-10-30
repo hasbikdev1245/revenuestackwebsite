@@ -541,6 +541,39 @@ h3 {
   color: var(--accent);
 }
 
+.tile-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 40px;
+  border-top: 1px solid var(--line);
+}
+
+.tile-grid li {
+  padding: 28px 36px 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.tile-grid li:nth-child(odd) {
+  border-right: 1px solid var(--line);
+  padding-right: 36px;
+}
+
+.tile-grid li:nth-child(even) {
+  padding-left: 36px;
+}
+
+.tile-grid h3 {
+  margin-top: 8px;
+}
+
+.tile-grid p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 .ledger, .steps {
   list-style: none;
   margin-top: 36px;
@@ -759,7 +792,16 @@ h3 {
   padding-left: 40px;
 }
 
-.fit-grid h3 { margin-bottom: 14px; }
+.fit-grid ul {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  color: var(--muted);
+  font-size: 16.5px;
+  line-height: 1.45;
+}
 
 .faq-list {
   margin-top: 36px;
@@ -1109,8 +1151,17 @@ h3 {
   .offer-grid,
   .stats,
   .fit-grid,
+  .tile-grid,
   .close-grid,
   .alignment { grid-template-columns: 1fr; }
+
+  .tile-grid li,
+  .tile-grid li:nth-child(odd),
+  .tile-grid li:nth-child(even) {
+    border-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   .close-grid .prose { position: static; }
 

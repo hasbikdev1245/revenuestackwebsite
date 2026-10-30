@@ -10,22 +10,14 @@ export default function Problem() {
             <h2>You solved the hardest problem in business. The one underneath it is eating your margin.</h2>
             <div className="prose">
               <p>
-                Getting customers profitably at scale is the hardest problem in business. You solved it. Your ads work, your funnel works, your sales team closes. Most operators never get there. You did.
+                Your ads work, your funnel works, your sales team closes. At 7 and 8 figures, the backend is the ceiling.
               </p>
-              <p>
-                But here’s what nobody tells you about cracking the front end: it exposes the backend. Every customer you acquire flows straight into a part of the business that was never intentionally designed, never staffed, and never systemized.
-              </p>
-              <p>And at 7 and 8 figures, that gap stops being an inconvenience and starts being the ceiling.</p>
             </div>
-            <p className="interjection">Sound familiar?</p>
-            <ol className="ledger">
+            <ol className="tile-grid">
               {gaps.map((gap, index) => (
                 <li key={gap.title}>
                   <span className="num">{String(index + 1).padStart(2, "0")}</span>
-                  <div>
-                    <h3>{gap.title}</h3>
-                    <p>{gap.body}</p>
-                  </div>
+                  <h3>{gap.title}</h3>
                 </li>
               ))}
             </ol>

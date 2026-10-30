@@ -10,7 +10,7 @@ export default function Faq() {
     <section className="section" id="faq">
       <div className="wrap">
         <div className="editorial">
-          <p className="eyebrow">07 — Questions</p>
+          <p className="eyebrow">05 — Questions</p>
           <div className="editorial-body">
             <h2>FAQ</h2>
             <div className="faq-list">
